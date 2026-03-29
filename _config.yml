@@ -1,0 +1,12 @@
+title: About AI
+description: Articles on AI agents, Skills, MCP, and modern AI-assisted workflows.
+baseurl: /about-ai
+url: https://russosalv.github.io
+
+theme: minima
+
+permalink: /:year/:month/:day/:title/
+
+exclude:
+  - README.md
+  - LICENSE
