@@ -101,7 +101,7 @@
   <text x="595" y="436" text-anchor="middle" font-size="11" fill="#666">Agents produce correct code from</text>
   <text x="595" y="452" text-anchor="middle" font-size="11" fill="#666">parametric memory, zero documentation cost</text>
 
-  <!-- VS divider -->
-  <circle cx="400" cy="285" r="20" fill="#1a3a5c"/>
-  <text x="400" y="291" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">VS</text>
+  <!-- VS divider (centered between columns: left ends at 390, right starts at 420, center = 405) -->
+  <circle cx="405" cy="285" r="22" fill="#1a3a5c"/>
+  <text x="405" y="291" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">VS</text>
 </svg>
