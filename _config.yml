@@ -3,8 +3,6 @@ description: Articles on AI agents, Skills, MCP, and modern AI-assisted workflow
 baseurl: /about-ai
 url: https://russosalv.github.io
 
-theme: minima
-
 permalink: /:year/:month/:day/:title/
 
 defaults:
@@ -17,3 +15,5 @@ defaults:
 exclude:
   - README.md
   - LICENSE
+  - docs/
+  - .superpowers/

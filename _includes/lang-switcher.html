@@ -1,27 +1,16 @@
-<div class="lang-switcher" style="text-align: right; padding: 8px 16px; font-size: 14px;">
-  {% if page.lang == "it" %}
-    {% if page.ref %}
-      {% assign target = site.posts | where: "ref", page.ref | where: "lang", "en" | first %}
-      {% if target %}
-        <a href="{{ target.url | relative_url }}">🇬🇧 English</a>
-      {% else %}
-        <a href="{{ '/en/' | relative_url }}">🇬🇧 English</a>
-      {% endif %}
-    {% else %}
-      <a href="{{ '/en/' | relative_url }}">🇬🇧 English</a>
-    {% endif %}
-    | <strong>🇮🇹 Italiano</strong>
-  {% else %}
-    <strong>🇬🇧 English</strong> |
-    {% if page.ref %}
-      {% assign target = site.posts | where: "ref", page.ref | where: "lang", "it" | first %}
-      {% if target %}
-        <a href="{{ target.url | relative_url }}">🇮🇹 Italiano</a>
-      {% else %}
-        <a href="{{ '/it/' | relative_url }}">🇮🇹 Italiano</a>
-      {% endif %}
-    {% else %}
-      <a href="{{ '/it/' | relative_url }}">🇮🇹 Italiano</a>
-    {% endif %}
+{% assign current_lang = page.lang | default: "en" %}
+{% if current_lang == "it" %}
+  {% if page.ref %}
+    {% assign en_target = site.posts | where: "ref", page.ref | where: "lang", "en" | first %}
   {% endif %}
-</div>
+  {% assign en_url = en_target.url | default: "/en/" %}
+  <a class="lang-link" href="{{ en_url | relative_url }}">EN</a>
+  <span class="lang-pill">IT</span>
+{% else %}
+  <span class="lang-pill">EN</span>
+  {% if page.ref %}
+    {% assign it_target = site.posts | where: "ref", page.ref | where: "lang", "it" | first %}
+  {% endif %}
+  {% assign it_url = it_target.url | default: "/it/" %}
+  <a class="lang-link" href="{{ it_url | relative_url }}">IT</a>
+{% endif %}
