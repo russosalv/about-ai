@@ -88,6 +88,6 @@
   <text x="735" y="412" text-anchor="middle" font-size="10" fill="#666">(standard only)</text>
 
   <!-- Bottom message -->
-  <rect x="180" y="465" width="500" height="40" rx="8" fill="#1a3a5c" opacity="0.06" stroke="#1a3a5c" stroke-width="1"/>
-  <text x="430" y="490" text-anchor="middle" font-size="13" font-weight="600" fill="#1a3a5c">Standard patterns work for ALL agents. Exotic patterns only work for the best one.</text>
+  <rect x="100" y="460" width="660" height="46" rx="8" fill="#1a3a5c" opacity="0.06" stroke="#1a3a5c" stroke-width="1"/>
+  <text x="430" y="489" text-anchor="middle" font-size="14" font-weight="600" fill="#1a3a5c">Standard patterns work for ALL agents. Exotic patterns only work for the best one.</text>
 </svg>
