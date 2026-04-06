@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="800" height="520" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a1a">Old-Style vs. AI-Native Architecture</text>
+  <text x="400" y="56" text-anchor="middle" font-size="12" fill="#666">How architectural choices impact AI agent effectiveness</text>
+
+  <!-- Left column: Old Style -->
+  <rect x="40" y="80" width="350" height="410" rx="10" fill="#fff" stroke="#dc3545" stroke-width="2"/>
+  <rect x="40" y="80" width="350" height="40" rx="10" fill="#dc3545"/>
+  <rect x="40" y="100" width="350" height="20" fill="#dc3545"/>
+  <text x="215" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Old-Style Architecture</text>
+
+  <!-- Old style items -->
+  <g transform="translate(60, 140)">
+    <circle cx="8" cy="8" r="8" fill="#dc3545" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#dc3545">&#10005;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Hyper-abstraction</text>
+    <text x="24" y="28" font-size="11" fill="#666">Forced interfaces to discipline developers</text>
+  </g>
+
+  <g transform="translate(60, 190)">
+    <circle cx="8" cy="8" r="8" fill="#dc3545" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#dc3545">&#10005;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Extreme segregation</text>
+    <text x="24" y="28" font-size="11" fill="#666">Dozens of NuGet/DLLs, agents can't see inside</text>
+  </g>
+
+  <g transform="translate(60, 240)">
+    <circle cx="8" cy="8" r="8" fill="#dc3545" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#dc3545">&#10005;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Asymmetric patterns</text>
+    <text x="24" y="28" font-size="11" fill="#666">Strict DDD write + direct controller read</text>
+  </g>
+
+  <g transform="translate(60, 290)">
+    <circle cx="8" cy="8" r="8" fill="#dc3545" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#dc3545">&#10005;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Custom interfaces</text>
+    <text x="24" y="28" font-size="11" fill="#666">Each needs tokens to explain in context</text>
+  </g>
+
+  <g transform="translate(60, 340)">
+    <circle cx="8" cy="8" r="8" fill="#dc3545" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#dc3545">&#10005;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Magic &amp; convention</text>
+    <text x="24" y="28" font-size="11" fill="#666">Reflection, implicit rules, indirection layers</text>
+  </g>
+
+  <!-- Old style result -->
+  <rect x="60" y="395" width="310" height="76" rx="6" fill="#dc3545" opacity="0.06"/>
+  <text x="215" y="418" text-anchor="middle" font-size="12" font-weight="600" fill="#dc3545">Result: 30-40% compliance</text>
+  <text x="215" y="436" text-anchor="middle" font-size="11" fill="#666">Agents hallucinate, ignore rules,</text>
+  <text x="215" y="452" text-anchor="middle" font-size="11" fill="#666">generate standard code anyway</text>
+
+  <!-- Right column: AI-Native -->
+  <rect x="420" y="80" width="350" height="410" rx="10" fill="#fff" stroke="#28a745" stroke-width="2"/>
+  <rect x="420" y="80" width="350" height="40" rx="10" fill="#28a745"/>
+  <rect x="420" y="100" width="350" height="20" fill="#28a745"/>
+  <text x="595" y="106" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">AI-Native Architecture</text>
+
+  <!-- AI-Native items -->
+  <g transform="translate(440, 140)">
+    <circle cx="8" cy="8" r="8" fill="#28a745" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#28a745">&#10003;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Standard patterns</text>
+    <text x="24" y="28" font-size="11" fill="#666">MVC, Repository, standard CQRS — zero-shot</text>
+  </g>
+
+  <g transform="translate(440, 190)">
+    <circle cx="8" cy="8" r="8" fill="#28a745" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#28a745">&#10003;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Cohesive workspace</text>
+    <text x="24" y="28" font-size="11" fill="#666">Monorepo, logical separation, full visibility</text>
+  </g>
+
+  <g transform="translate(440, 240)">
+    <circle cx="8" cy="8" r="8" fill="#28a745" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#28a745">&#10003;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Symmetric patterns</text>
+    <text x="24" y="28" font-size="11" fill="#666">Same pattern for reads and writes</text>
+  </g>
+
+  <g transform="translate(440, 290)">
+    <circle cx="8" cy="8" r="8" fill="#28a745" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#28a745">&#10003;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Library standards</text>
+    <text x="24" y="28" font-size="11" fill="#666">MediatR, EF — agents know them natively</text>
+  </g>
+
+  <g transform="translate(440, 340)">
+    <circle cx="8" cy="8" r="8" fill="#28a745" opacity="0.15"/>
+    <text x="8" y="12" text-anchor="middle" font-size="11" fill="#28a745">&#10003;</text>
+    <text x="24" y="12" font-size="12" font-weight="600" fill="#1a1a1a">Explicit &gt; implicit</text>
+    <text x="24" y="28" font-size="11" fill="#666">Boilerplate is free, magic is expensive</text>
+  </g>
+
+  <!-- AI-Native result -->
+  <rect x="440" y="395" width="310" height="76" rx="6" fill="#28a745" opacity="0.06"/>
+  <text x="595" y="418" text-anchor="middle" font-size="12" font-weight="600" fill="#28a745">Result: 80%+ compliance</text>
+  <text x="595" y="436" text-anchor="middle" font-size="11" fill="#666">Agents produce correct code from</text>
+  <text x="595" y="452" text-anchor="middle" font-size="11" fill="#666">parametric memory, zero documentation cost</text>
+
+  <!-- VS divider -->
+  <circle cx="400" cy="285" r="20" fill="#1a3a5c"/>
+  <text x="400" y="291" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">VS</text>
+</svg>

@@ -74,6 +74,8 @@ I ricercatori hanno condotto un esperimento controllato: dato un insieme di docu
 
 Questo pattern si è confermato **consistente** attraverso modelli multipli, architetture diverse e dimensioni differenti. Non è un difetto di un singolo modello — è una caratteristica strutturale dell'architettura transformer.
 
+![Lost in the Middle — Attenzione LLM per Posizione: l'accuratezza è massima all'inizio e alla fine del contesto, ma cala significativamente nel mezzo]({{ "/article-graphics/05-lost-in-the-middle-ucurve.svg" | relative_url }})
+
 **Perché è rilevante per l'architettura software:** Se le regole architetturali non-standard del progetto — come le eccezioni al DDD strict, le convenzioni sulle letture dirette da controller, le interfacce comuni custom — sono contenute in documenti di analisi o CLAUDE.md file estesi, l'agente tenderà a ignorarle quando sono "sepolte" nel mezzo di un contesto ampio. In assenza di istruzioni chiare e prominenti, l'AI farà **fallback** sulla propria memoria parametrica, generando codice standard.
 
 Meno regole custom ci sono, meno probabilità ci sono che l'AI le perda nel mezzo del contesto.
@@ -96,6 +98,8 @@ Dati sperimentali quantificano l'impatto:
 | 70%+ | Bassa | Spesso ignorate del tutto |
 
 L'obiettivo operativo per un team che usa agenti AI è **massimizzare il tempo in cui l'agente opera nella zona "Alta Qualità" (sotto il 40% del context window)**. Un'architettura standard che non richiede documentazione aggiuntiva per essere compresa dall'agente lascia più spazio nel contesto per il task effettivo.
+
+![Context Window Fill vs Qualità Output: 0-40% alta qualità, 40-70% degradata, 70%+ zona di errore — i pattern standard ti mantengono nella zona verde più a lungo]({{ "/article-graphics/06-context-window-degradation.svg" | relative_url }})
 
 > **Riferimenti:**
 > - Liu et al., *"Lost in the Middle: How Language Models Use Long Contexts"*, Transactions of the Association for Computational Linguistics, Vol. 12, 2023 — [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
@@ -153,6 +157,8 @@ In un progetto software moderno, il codice viene toccato da **molteplici agenti 
 - **L'agente dello sviluppatore a fine mese**: usa modelli economici (Claude Haiku, GPT-4o-mini) per preservare il budget mensile di token — opera con poco contesto e capacità inferenziale ridotta
 
 Questa asimmetria è un fatto strutturale del ciclo di vita del software nell'era agentica, non un caso limite.
+
+![Multi-Agent Lifecycle: quattro agenti con contesto decrescente — solo i pattern standard funzionano per tutti]({{ "/article-graphics/07-multi-agent-context-hierarchy.svg" | relative_url }})
 
 ### 4.2 Sub-Agent Context Hierarchy
 
@@ -301,6 +307,8 @@ Le architetture migliori per l'AI sono quelle basate su pattern **simmetrici e p
 | **Resilienza Multi-Agente** | Bassa: un agente "minore" o senza accesso ai documenti sbaglierà | Alta: qualsiasi agente, anche con modello base, sa gestire pattern standard |
 | **Costo di documentazione** | Elevato: regole esotiche richiedono documentazione estesa | Basso: pattern standard si autodocumentano attraverso il codice |
 | **Verificabilità computazionale** | Difficile: regole asimmetriche richiedono judgment inferenziale | Facile: pattern standard esprimibili come fitness function deterministiche |
+
+![Old-Style vs AI-Native Architecture: iper-astrazione e pattern esotici portano al 30-40% di compliance, mentre i pattern standard raggiungono l'80%+]({{ "/article-graphics/08-old-style-vs-ai-native.svg" | relative_url }})
 
 ---
 

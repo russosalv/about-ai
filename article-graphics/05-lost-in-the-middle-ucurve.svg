@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="800" height="450" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a1a">"Lost in the Middle" — LLM Attention by Position</text>
+  <text x="400" y="56" text-anchor="middle" font-size="12" fill="#666">Based on Liu et al., Stanford/UC Berkeley, 2023</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="350" x2="720" y2="350" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="100" y1="80" x2="100" y2="350" stroke="#ccc" stroke-width="1.5"/>
+
+  <!-- Y axis labels -->
+  <text x="90" y="90" text-anchor="end" font-size="11" fill="#666">High</text>
+  <text x="90" y="220" text-anchor="end" font-size="11" fill="#666">Medium</text>
+  <text x="90" y="345" text-anchor="end" font-size="11" fill="#666">Low</text>
+  <text x="40" y="220" text-anchor="middle" font-size="12" font-weight="600" fill="#1a1a1a" transform="rotate(-90,40,220)">Accuracy</text>
+
+  <!-- X axis labels -->
+  <text x="140" y="375" text-anchor="middle" font-size="11" fill="#666">Beginning</text>
+  <text x="410" y="375" text-anchor="middle" font-size="11" fill="#666">Middle</text>
+  <text x="680" y="375" text-anchor="middle" font-size="11" fill="#666">End</text>
+  <text x="410" y="400" text-anchor="middle" font-size="12" font-weight="600" fill="#1a1a1a">Position of relevant information in context</text>
+
+  <!-- U-curve path -->
+  <path d="M 140,100 C 200,110 280,280 410,310 C 540,280 620,120 680,105" fill="none" stroke="#1a3a5c" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Gradient fill under curve -->
+  <path d="M 140,100 C 200,110 280,280 410,310 C 540,280 620,120 680,105 L 680,350 L 140,350 Z" fill="#1a3a5c" opacity="0.08"/>
+
+  <!-- Data points -->
+  <circle cx="140" cy="100" r="6" fill="#1a3a5c"/>
+  <circle cx="410" cy="310" r="6" fill="#dc3545"/>
+  <circle cx="680" cy="105" r="6" fill="#1a3a5c"/>
+
+  <!-- Annotations -->
+  <rect x="110" y="60" width="120" height="28" rx="4" fill="#1a3a5c" opacity="0.1"/>
+  <text x="170" y="79" text-anchor="middle" font-size="11" font-weight="600" fill="#1a3a5c">Primacy Bias</text>
+
+  <rect x="355" y="318" width="110" height="28" rx="4" fill="#dc3545" opacity="0.1"/>
+  <text x="410" y="337" text-anchor="middle" font-size="11" font-weight="600" fill="#dc3545">Blind Spot</text>
+
+  <rect x="620" y="60" width="120" height="28" rx="4" fill="#1a3a5c" opacity="0.1"/>
+  <text x="680" y="79" text-anchor="middle" font-size="11" font-weight="600" fill="#1a3a5c">Recency Bias</text>
+
+  <!-- Danger zone highlight -->
+  <rect x="260" y="75" width="300" height="270" rx="6" fill="#dc3545" opacity="0.04" stroke="#dc3545" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="410" y="430" text-anchor="middle" font-size="11" fill="#999">Custom architectural rules placed in the middle of context are systematically ignored</text>
+</svg>

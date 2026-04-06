@@ -74,6 +74,8 @@ The researchers conducted a controlled experiment: given a set of documents wher
 
 This pattern has proven **consistent** across multiple models, different architectures, and varying sizes. It is not a defect of a single model — it is a structural characteristic of the transformer architecture.
 
+![Lost in the Middle — LLM Attention by Position: accuracy is highest at the beginning and end of context, but drops significantly in the middle]({{ "/article-graphics/05-lost-in-the-middle-ucurve.svg" | relative_url }})
+
 **Why this matters for software architecture:** If the project's non-standard architectural rules — such as exceptions to strict DDD, conventions for direct reads from controllers, custom common interfaces — are contained in analysis documents or lengthy CLAUDE.md files, the agent will tend to ignore them when they are "buried" in the middle of a large context. In the absence of clear and prominent instructions, the AI will **fall back** to its parametric memory, generating standard code.
 
 Fewer custom rules means fewer chances that the AI loses them in the middle of the context.
@@ -96,6 +98,8 @@ Experimental data quantifies the impact:
 | 70%+ | Low | Often ignored entirely |
 
 The operational objective for a team using AI agents is to **maximize the time the agent operates in the "High Quality" zone (below 40% of the context window)**. A standard architecture that doesn't require additional documentation for the agent to understand it leaves more room in the context for the actual task.
+
+![Context Window Fill vs Output Quality: 0-40% high quality, 40-70% degraded, 70%+ failure zone — standard patterns keep you in the green zone longer]({{ "/article-graphics/06-context-window-degradation.svg" | relative_url }})
 
 > **References:**
 > - Liu et al., *"Lost in the Middle: How Language Models Use Long Contexts"*, Transactions of the Association for Computational Linguistics, Vol. 12, 2023 — [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172)
@@ -153,6 +157,8 @@ In a modern software project, code is touched by **multiple AI agents with radic
 - **The end-of-month developer's agent**: uses economic models (Claude Haiku, GPT-4o-mini) to preserve the monthly token budget — operates with limited context and reduced inferential capability
 
 This asymmetry is a structural fact of the software lifecycle in the agentic era, not an edge case.
+
+![Multi-Agent Lifecycle: four agents with decreasing context — only standard patterns work for all of them]({{ "/article-graphics/07-multi-agent-context-hierarchy.svg" | relative_url }})
 
 ### 4.2 Sub-Agent Context Hierarchy
 
@@ -301,6 +307,8 @@ The best architectures for AI are those based on **symmetric and predictable** p
 | **Multi-agent resilience** | Low: a "lesser" agent or one without document access will fail | High: any agent, even with a base model, can handle standard patterns |
 | **Documentation cost** | High: exotic rules require extensive documentation | Low: standard patterns self-document through code |
 | **Computational verifiability** | Difficult: asymmetric rules require inferential judgment | Easy: standard patterns expressible as deterministic fitness functions |
+
+![Old-Style vs AI-Native Architecture: hyper-abstraction and exotic patterns lead to 30-40% compliance, while standard patterns achieve 80%+]({{ "/article-graphics/08-old-style-vs-ai-native.svg" | relative_url }})
 
 ---
 

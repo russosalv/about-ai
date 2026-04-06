@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="800" height="400" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a1a">Context Window Fill vs. Output Quality</text>
+  <text x="400" y="56" text-anchor="middle" font-size="12" fill="#666">More custom rules = faster context saturation = lower quality</text>
+
+  <!-- Three zones -->
+  <!-- Green zone: 0-40% -->
+  <rect x="80" y="80" width="213" height="260" rx="8" fill="#28a745" opacity="0.08" stroke="#28a745" stroke-width="1.5"/>
+  <text x="186" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#28a745">0 — 40%</text>
+  <text x="186" y="128" text-anchor="middle" font-size="11" fill="#28a745">HIGH QUALITY</text>
+  <line x1="120" y1="145" x2="252" y2="145" stroke="#28a745" stroke-width="0.5" opacity="0.5"/>
+  <text x="186" y="168" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="600">Output Quality</text>
+  <text x="186" y="186" text-anchor="middle" font-size="20" fill="#28a745" font-weight="700">Excellent</text>
+  <line x1="120" y1="205" x2="252" y2="205" stroke="#28a745" stroke-width="0.5" opacity="0.5"/>
+  <text x="186" y="228" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="600">Custom Rules</text>
+  <text x="186" y="248" text-anchor="middle" font-size="14" fill="#28a745">Consistently followed</text>
+  <line x1="120" y1="265" x2="252" y2="265" stroke="#28a745" stroke-width="0.5" opacity="0.5"/>
+  <text x="186" y="288" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="600">Agent State</text>
+  <text x="186" y="308" text-anchor="middle" font-size="12" fill="#28a745">Focused, accurate,</text>
+  <text x="186" y="324" text-anchor="middle" font-size="12" fill="#28a745">zero-shot capable</text>
+
+  <!-- Yellow zone: 40-70% -->
+  <rect x="303" y="80" width="213" height="260" rx="8" fill="#ffc107" opacity="0.1" stroke="#e6a700" stroke-width="1.5"/>
+  <text x="410" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#b38600">40 — 70%</text>
+  <text x="410" y="128" text-anchor="middle" font-size="11" fill="#b38600">DEGRADED</text>
+  <line x1="343" y1="145" x2="476" y2="145" stroke="#e6a700" stroke-width="0.5" opacity="0.5"/>
+  <text x="410" y="168" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="600">Output Quality</text>
+  <text x="410" y="186" text-anchor="middle" font-size="20" fill="#b38600" font-weight="700">Medium</text>
+  <line x1="343" y1="205" x2="476" y2="205" stroke="#e6a700" stroke-width="0.5" opacity="0.5"/>
+  <text x="410" y="228" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="600">Custom Rules</text>
+  <text x="410" y="248" text-anchor="middle" font-size="14" fill="#b38600">Occasionally ignored</text>
+  <line x1="343" y1="265" x2="476" y2="265" stroke="#e6a700" stroke-width="0.5" opacity="0.5"/>
+  <text x="410" y="288" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="600">Agent State</text>
+  <text x="410" y="308" text-anchor="middle" font-size="12" fill="#b38600">Attention diluted,</text>
+  <text x="410" y="324" text-anchor="middle" font-size="12" fill="#b38600">falls back to training</text>
+
+  <!-- Red zone: 70%+ -->
+  <rect x="526" y="80" width="213" height="260" rx="8" fill="#dc3545" opacity="0.08" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="632" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#dc3545">70 — 100%</text>
+  <text x="632" y="128" text-anchor="middle" font-size="11" fill="#dc3545">FAILURE ZONE</text>
+  <line x1="566" y1="145" x2="699" y2="145" stroke="#dc3545" stroke-width="0.5" opacity="0.5"/>
+  <text x="632" y="168" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="600">Output Quality</text>
+  <text x="632" y="186" text-anchor="middle" font-size="20" fill="#dc3545" font-weight="700">Low</text>
+  <line x1="566" y1="205" x2="699" y2="205" stroke="#dc3545" stroke-width="0.5" opacity="0.5"/>
+  <text x="632" y="228" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="600">Custom Rules</text>
+  <text x="632" y="248" text-anchor="middle" font-size="14" fill="#dc3545">Often ignored entirely</text>
+  <line x1="566" y1="265" x2="699" y2="265" stroke="#dc3545" stroke-width="0.5" opacity="0.5"/>
+  <text x="632" y="288" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="600">Agent State</text>
+  <text x="632" y="308" text-anchor="middle" font-size="12" fill="#dc3545">Context rot, pattern</text>
+  <text x="632" y="324" text-anchor="middle" font-size="12" fill="#dc3545">replication, hallucination</text>
+
+  <!-- Arrow -->
+  <line x1="100" y1="365" x2="720" y2="365" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#1a1a1a"/></marker></defs>
+  <text x="410" y="388" text-anchor="middle" font-size="12" font-weight="600" fill="#1a1a1a">Standard patterns keep you in the green zone longer</text>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <rect width="800" height="500" fill="#f8f9fa" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a1a">Multi-Agent Lifecycle: Context Asymmetry</text>
+  <text x="400" y="56" text-anchor="middle" font-size="12" fill="#666">Different agents see different slices of the codebase — architecture must work for all</text>
+
+  <!-- Agent 1: Senior Dev -->
+  <rect x="40" y="80" width="160" height="340" rx="8" fill="#fff" stroke="#28a745" stroke-width="2"/>
+  <rect x="40" y="80" width="160" height="44" rx="8" fill="#28a745"/>
+  <rect x="40" y="106" width="160" height="18" fill="#28a745"/>
+  <text x="120" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Senior Dev Agent</text>
+  <text x="120" y="148" text-anchor="middle" font-size="11" fill="#28a745" font-weight="600">Claude Opus 1M tokens</text>
+
+  <!-- Context bars for Agent 1 -->
+  <text x="60" y="178" font-size="10" fill="#666">Full monorepo</text>
+  <rect x="60" y="184" width="120" height="10" rx="3" fill="#28a745" opacity="0.7"/>
+  <text x="60" y="212" font-size="10" fill="#666">All documentation</text>
+  <rect x="60" y="218" width="120" height="10" rx="3" fill="#28a745" opacity="0.6"/>
+  <text x="60" y="246" font-size="10" fill="#666">LSP + type info</text>
+  <rect x="60" y="252" width="120" height="10" rx="3" fill="#28a745" opacity="0.5"/>
+  <text x="60" y="280" font-size="10" fill="#666">Architecture specs</text>
+  <rect x="60" y="286" width="120" height="10" rx="3" fill="#28a745" opacity="0.4"/>
+  <text x="60" y="314" font-size="10" fill="#666">CLAUDE.md</text>
+  <rect x="60" y="320" width="120" height="10" rx="3" fill="#28a745" opacity="0.3"/>
+
+  <rect x="55" y="350" width="130" height="56" rx="6" fill="#28a745" opacity="0.08"/>
+  <text x="120" y="370" text-anchor="middle" font-size="11" font-weight="600" fill="#28a745">Understands exotic</text>
+  <text x="120" y="385" text-anchor="middle" font-size="11" font-weight="600" fill="#28a745">patterns? YES</text>
+  <text x="120" y="400" text-anchor="middle" font-size="10" fill="#666">(with token cost)</text>
+
+  <!-- Agent 2: PR Review -->
+  <rect x="230" y="80" width="160" height="340" rx="8" fill="#fff" stroke="#ffc107" stroke-width="2"/>
+  <rect x="230" y="80" width="160" height="44" rx="8" fill="#e6a700"/>
+  <rect x="230" y="106" width="160" height="18" fill="#e6a700"/>
+  <text x="310" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">PR Review Agent</text>
+  <text x="310" y="148" text-anchor="middle" font-size="11" fill="#b38600" font-weight="600">Sub-repo context only</text>
+
+  <text x="250" y="178" font-size="10" fill="#666">Sub-repo code</text>
+  <rect x="250" y="184" width="80" height="10" rx="3" fill="#e6a700" opacity="0.7"/>
+  <text x="250" y="212" font-size="10" fill="#666">PR diff</text>
+  <rect x="250" y="218" width="60" height="10" rx="3" fill="#e6a700" opacity="0.6"/>
+  <text x="250" y="246" font-size="10" fill="#999">No umbrella docs</text>
+  <rect x="250" y="252" width="40" height="10" rx="3" fill="#ccc" opacity="0.5"/>
+  <text x="250" y="280" font-size="10" fill="#999">No arch specs</text>
+  <rect x="250" y="286" width="20" height="10" rx="3" fill="#ccc" opacity="0.4"/>
+
+  <rect x="245" y="350" width="130" height="56" rx="6" fill="#e6a700" opacity="0.08"/>
+  <text x="310" y="370" text-anchor="middle" font-size="11" font-weight="600" fill="#b38600">Understands exotic</text>
+  <text x="310" y="385" text-anchor="middle" font-size="11" font-weight="600" fill="#b38600">patterns? MAYBE</text>
+  <text x="310" y="400" text-anchor="middle" font-size="10" fill="#666">(false positives likely)</text>
+
+  <!-- Agent 3: CI/CD -->
+  <rect x="420" y="80" width="160" height="340" rx="8" fill="#fff" stroke="#dc3545" stroke-width="2"/>
+  <rect x="420" y="80" width="160" height="44" rx="8" fill="#dc3545"/>
+  <rect x="420" y="106" width="160" height="18" fill="#dc3545"/>
+  <text x="500" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">CI/CD Agent</text>
+  <text x="500" y="148" text-anchor="middle" font-size="11" fill="#dc3545" font-weight="600">Limited token budget</text>
+
+  <text x="440" y="178" font-size="10" fill="#666">Changed files only</text>
+  <rect x="440" y="184" width="50" height="10" rx="3" fill="#dc3545" opacity="0.7"/>
+  <text x="440" y="212" font-size="10" fill="#999">No documentation</text>
+  <rect x="440" y="218" width="20" height="10" rx="3" fill="#ccc" opacity="0.5"/>
+  <text x="440" y="246" font-size="10" fill="#999">No design context</text>
+  <rect x="440" y="252" width="10" height="10" rx="3" fill="#ccc" opacity="0.3"/>
+
+  <rect x="435" y="350" width="130" height="56" rx="6" fill="#dc3545" opacity="0.08"/>
+  <text x="500" y="370" text-anchor="middle" font-size="11" font-weight="600" fill="#dc3545">Understands exotic</text>
+  <text x="500" y="385" text-anchor="middle" font-size="11" font-weight="600" fill="#dc3545">patterns? NO</text>
+  <text x="500" y="400" text-anchor="middle" font-size="10" fill="#666">(will hallucinate)</text>
+
+  <!-- Agent 4: Budget Dev -->
+  <rect x="610" y="80" width="160" height="340" rx="8" fill="#fff" stroke="#dc3545" stroke-width="2"/>
+  <rect x="610" y="80" width="160" height="44" rx="8" fill="#dc3545"/>
+  <rect x="610" y="106" width="160" height="18" fill="#dc3545"/>
+  <text x="690" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Budget Agent</text>
+  <text x="690" y="148" text-anchor="middle" font-size="11" fill="#dc3545" font-weight="600">Haiku / GPT-4o-mini</text>
+
+  <text x="630" y="178" font-size="10" fill="#666">Local files</text>
+  <rect x="630" y="184" width="60" height="10" rx="3" fill="#dc3545" opacity="0.6"/>
+  <text x="630" y="212" font-size="10" fill="#999">Minimal context</text>
+  <rect x="630" y="218" width="30" height="10" rx="3" fill="#ccc" opacity="0.4"/>
+  <text x="630" y="246" font-size="10" fill="#999">Weaker reasoning</text>
+  <rect x="630" y="252" width="15" height="10" rx="3" fill="#ccc" opacity="0.3"/>
+
+  <rect x="625" y="350" width="130" height="56" rx="6" fill="#dc3545" opacity="0.08"/>
+  <text x="690" y="370" text-anchor="middle" font-size="11" font-weight="600" fill="#dc3545">Understands exotic</text>
+  <text x="690" y="385" text-anchor="middle" font-size="11" font-weight="600" fill="#dc3545">patterns? NO</text>
+  <text x="690" y="400" text-anchor="middle" font-size="10" fill="#666">(standard only)</text>
+
+  <!-- Bottom message -->
+  <rect x="160" y="440" width="480" height="40" rx="8" fill="#1a3a5c" opacity="0.06" stroke="#1a3a5c" stroke-width="1"/>
+  <text x="400" y="465" text-anchor="middle" font-size="13" font-weight="600" fill="#1a3a5c">Standard patterns work for ALL agents. Exotic patterns only work for the best one.</text>
+</svg>
