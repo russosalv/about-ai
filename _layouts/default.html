@@ -3,8 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title | escape }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  {% seo %}
+  {% assign current_lang = page.lang | default: "en" %}
+  {% assign other_lang = "it" %}
+  {% if current_lang == "it" %}{% assign other_lang = "en" %}{% endif %}
+  {% if page.ref %}
+    {% assign alt_page = site.posts | where: "ref", page.ref | where: "lang", other_lang | first %}
+    {% if alt_page %}
+  <link rel="alternate" hreflang="{{ other_lang }}" href="{{ alt_page.url | absolute_url }}" />
+  <link rel="alternate" hreflang="{{ current_lang }}" href="{{ page.url | absolute_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.posts | where: "ref", page.ref | where: "lang", "en" | first | map: "url" | first | absolute_url }}" />
+    {% endif %}
+  {% elsif page.url == "/en/" or page.url == "/it/" %}
+  <link rel="alternate" hreflang="en" href="{{ '/en/' | absolute_url }}" />
+  <link rel="alternate" hreflang="it" href="{{ '/it/' | absolute_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{{ '/en/' | absolute_url }}" />
+  {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 </head>

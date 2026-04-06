@@ -5,6 +5,7 @@ date: 2026-04-06
 description: "Nell'era del Vibe Coding, la standardizzazione e la semplicità non sono un compromesso sulla qualità — sono un requisito tecnico."
 lang: it
 ref: ai-native-architecture
+image: /about-ai/article-graphics/08-old-style-vs-ai-native.svg
 ---
 
 > **"Nell'era del Vibe Coding, la standardizzazione e la semplicità non sono un compromesso sulla qualità — sono un requisito tecnico."**

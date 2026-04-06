@@ -5,6 +5,7 @@ date: 2026-03-29
 description: "Abbiamo sostituito i server MCP con Skills in plain-text e comandi CLI. I risultati ci hanno sorpreso."
 lang: it
 ref: mcp-context-window
+image: /about-ai/article-graphics/01-context-window-comparison.png
 ---
 
 C'è una tensione crescente nell'ecosistema degli agenti AI di cui nessuno vuole parlare: il protocollo stesso progettato per rendere gli agenti più capaci — MCP (Model Context Protocol) — potrebbe renderli più stupidi.

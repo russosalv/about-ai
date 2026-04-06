@@ -5,12 +5,31 @@ url: https://russosalv.github.io
 
 permalink: /:year/:month/:day/:title/
 
+author:
+  name: Alessandro Russo
+  url: https://russosalv.github.io/about-ai/
+
+twitter:
+  card: summary_large_image
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       lang: "en"
+  - scope:
+      path: "en"
+    values:
+      lang: "en"
+  - scope:
+      path: "it"
+    values:
+      lang: "it"
 
 exclude:
   - README.md
