@@ -3,6 +3,8 @@ layout: post
 title: "Your MCP Server Is Eating Your Context Window — Here's What We Did Instead"
 date: 2026-03-29
 description: "We replaced MCP servers with plain-text Skills and CLI commands. The results surprised us."
+lang: en
+ref: mcp-context-window
 ---
 
 There's a growing tension in the AI agent ecosystem that nobody wants to talk about: the very protocol designed to make agents more capable — MCP (Model Context Protocol) — might be making them dumber.
